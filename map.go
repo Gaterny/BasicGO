@@ -13,11 +13,19 @@ func main() {
 	// declare empty map
 	height := map[string]int{}
 
-	// assign age
+	// insert element
 	ages["lihua"] = 21
 	ages["ming"] = 20
 
 	// if key is not exist, return 0
 	fmt.Println(height["lihua"])
+
+	// delete element
 	delete(weight, "lihua")
+
+	// check key exists or not
+	_, ok := weight["lihua"]
+	if ok == false {
+		fmt.Println("key is not exist")
+	}
 }
